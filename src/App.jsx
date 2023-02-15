@@ -1,9 +1,9 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
-import ComponenteA from './components/ComponenteA'
 import Item from './components/Item'
 import { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 const App = () => {
 
@@ -15,15 +15,19 @@ const App = () => {
 
   return (
     <div>
+      <BrowserRouter>
+        <NavBar />
       
+        <Routes>
+          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/" element={<About />}/>
+          <ItemListContainer />
+        </Routes>
+      
+        <Footer />
+      </BrowserRouter>
 
 
-      <NavBar />
-      <ItemListContainer />
-      <ComponenteA >
-        numero= {5}
-        isUser= {true}
-      </ComponenteA>
       <p>{contador}</p>
       <button onClick={sumar}>Sumar</button>
       <button onClick={()=>{
