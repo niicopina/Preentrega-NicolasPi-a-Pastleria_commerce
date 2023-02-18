@@ -4,9 +4,13 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <div>
-        <Link to="/">
+       {/*  <Link to="/">
             <button>volver a inicio</button> 
         </Link>
+        <Link to="/about">
+            <button>volver a About</button> 
+        </Link>
+         */}
     </div>
   )
 }

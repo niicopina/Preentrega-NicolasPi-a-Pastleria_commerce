@@ -1,4 +1,7 @@
-.navbar-nav {
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
 }

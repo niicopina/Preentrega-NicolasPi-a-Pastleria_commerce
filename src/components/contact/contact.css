@@ -1,0 +1,40 @@
+:root{
+    --text-color: #302e29;
+    --main-color: #fc6436;
+    --second-color: #858585;
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.4rem;
+    }
+.contact {
+    padding: 150px;
+    margin-left: 88px;
+}
+
+.main-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 100px));
+    gap: 1rem;
+}
+.contact-content {
+    text-decoration: none;
+}
+.contact-content h4 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+.contact-content li {
+    margin-bottom: 16px;
+}
+.contact-content li a{
+    display: block;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .38s ease;
+}
+.contact-content li a:hover {
+    transform: translateX(10px);
+    color: var(--main-color);
+}
