@@ -10,10 +10,10 @@ const ItemListContainer = () => {
   const catFilter = Data.filter((prod) => prod.category === category);
 
   return (
-    <div>
-      <Center bg="#D6EAF8" h="100px" color="black">
+    <div className="categorias-titulo">
+      <Center bg="tomato" h="120px" color="black" display="flex" alignItems="center">
         <Heading as="h2" size="2xl">
-          Menu por categorias
+          Menu
         </Heading>
       </Center>
         {category ? <ItemList prods={catFilter} /> : <ItemList prods={Data} />}
