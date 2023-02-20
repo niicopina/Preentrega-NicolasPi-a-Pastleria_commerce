@@ -1,5 +1,6 @@
 import React from 'react'
 import './home.css'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
         <div className="home-text">
             <h1><span>Bienvenid@s </span>Pastelería Casera</h1>
             <p>Nos especializamos en pastelería artesanal y tortas decoradas</p>
-            <a href="./menu.html" className="btn" id="btn">Haz tu pedido</a>
+            <Button colorScheme='teal' size='sm'>Mira el Menu</Button>
         </div>
 
         <div className="home-img">

@@ -1,18 +1,37 @@
 import React from 'react'
+import Data from '../data.json'
+import {Center, Card, CardBody, Image, Heading, Text, Divider, Stack, CardFooter, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom"
 
 const Item = ({id, name, stock, category}) => {
   return (
     <>
     <div key={id}>
-      <div className="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="..."/>
-          <div className="card-body">
-            <h5 className="card-title">{name}</h5>
-            <p className="card-text">{category}</p>
-            <p className="card-text">Stock:{stock}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-      </div>
+    <Center p="1rem">
+          <Card className="card-main">
+            <CardBody>
+              <Image borderRadius="lg"  />
+              <Stack mt="6" spacing="3">
+                <Heading size="md">{name}</Heading>
+
+                <Text color="blue.800" fontSize="l">
+                  Category: {category}
+                </Text>
+                <Text color="red.600" fontSize="xl">
+                  Stock: {stock}
+                </Text>
+              </Stack>
+            </CardBody>
+            <Divider />
+            <CardFooter className="card-footer">
+              <Center className="btn-center">
+                <Button variant="solid" colorScheme="blue">
+                  <Link to={`/item/${id}`}>Details</Link>
+                </Button>
+              </Center>
+            </CardFooter>
+          </Card>
+      </Center>
     </div>
     </>
   )

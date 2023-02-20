@@ -34,5 +34,14 @@
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
       "category": "Personalizados"
+    },
+    {
+      "id": 5,
+      "name": "Tiramisu",
+      "price": 4000,
+      "description":
+        "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+      "stock": 5,
+      "category": "Pastel"
     }
   ]

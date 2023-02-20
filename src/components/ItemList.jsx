@@ -1,11 +1,12 @@
 import React from 'react'
 import Item from './Item'
+import { Container } from "@chakra-ui/react";
 
-const ItemList = ({prod}) => {
+const ItemList = ({prods}) => {
   return (
     <div>
-        <div className="card-body">
-            {prod?.map((prod)=> (
+        <Container maxW="container.sm" className="main-catalogue">
+            {prods?.map((prod)=> (
                 <Item
                 key={prod.id}
                 id={prod.id}
@@ -17,7 +18,7 @@ const ItemList = ({prod}) => {
                 />
             ))}
 
-        </div>
+        </Container>
     </div>
   )
 }
