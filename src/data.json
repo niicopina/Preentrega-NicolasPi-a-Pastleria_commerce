@@ -6,17 +6,17 @@
       "description":
         "Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 3,
-      "category": "Pastel",
+      "category": "Pasteles",
       "image": "./src/assets/cheesecacke2.jpg"
     },
     {
       "id": 2,
-      "name": "Muffin",
+      "name": "Muffins",
       "price": 800,
       "description":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. igendi ducimus numquam quibusdam minima.",
       "stock": 8,
-      "category": "Horneados",
+      "category": "Muffins",
       "image": "./src/assets/cheesecacke2.jpg"
     },
     {
@@ -46,7 +46,27 @@
       "description":
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
-      "category": "Pastel",
+      "category": "Pasteles",
+      "image": "./src/assets/cheesecacke2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Lemon Pie",
+      "price": 4000,
+      "description":
+        "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+      "stock": 5,
+      "category": "Pasteles",
+      "image": "./src/assets/cheesecacke2.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Cupcakes",
+      "price": 4000,
+      "description":
+        "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+      "stock": 5,
+      "category": "Muffins",
       "image": "./src/assets/cheesecacke2.jpg"
     }
   ]

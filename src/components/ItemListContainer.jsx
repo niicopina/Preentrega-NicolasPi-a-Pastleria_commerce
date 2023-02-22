@@ -3,7 +3,18 @@ import Data from '../data.json'
 import { useState, useEffect } from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
-import { Heading, Center } from "@chakra-ui/react";
+import { Center, Button } from "@chakra-ui/react";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const ItemListContainer = () => {
   const { category } = useParams();
@@ -12,11 +23,24 @@ const ItemListContainer = () => {
   return (
     <div className="categorias-titulo">
       <Center bg="tomato" h="120px" color="black" display="flex" alignItems="center">
-        <Heading as="h2" size="2xl">
-          Menu
-        </Heading>
+        <Menu>
+          <MenuButton as={Button} >
+            Filtrar MENU por categorías
+          </MenuButton>
+          <MenuList>
+            <Link to={`/category/${"Pasteles"}`}>
+              <MenuItem>Pasteles</MenuItem>
+            </Link>
+    
+              <MenuItem>Muffins</MenuItem>
+              <MenuItem>Festivos</MenuItem>
+              <MenuItem>Personalizados</MenuItem>
+          </MenuList>
+          
+        </Menu>
       </Center>
-        {category ? <ItemList prods={catFilter} /> : <ItemList prods={Data} />}
+      {category ? <ItemList prods={catFilter} /> : <ItemList prods={Data} />}
+        
     </div>
   )
 }
