@@ -1,6 +1,7 @@
 import React from 'react'
 import './home.css'
 import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
         <div className="home-text">
             <h1><span>Bienvenid@s </span>Pastelería Casera</h1>
             <p>Nos especializamos en pastelería artesanal y tortas decoradas</p>
-            <Button colorScheme='teal' size='sm'>Mira el Menu</Button>
+            <Button bg='tomato' colorScheme='teal' color='black' size='md'><Link to="/menu">Ir al Menu</Link></Button>
         </div>
 
         <div className="home-img">

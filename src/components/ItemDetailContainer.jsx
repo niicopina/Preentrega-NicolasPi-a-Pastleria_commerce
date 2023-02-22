@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "./itemdetail/ItemDetail";
 import { useState, useEffect } from "react";
 import Data from "../data.json";
 

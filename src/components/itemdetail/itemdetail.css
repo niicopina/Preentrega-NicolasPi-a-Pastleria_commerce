@@ -1,0 +1,8 @@
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+.card-main {
+    background: rgb(225, 203, 203);
+}

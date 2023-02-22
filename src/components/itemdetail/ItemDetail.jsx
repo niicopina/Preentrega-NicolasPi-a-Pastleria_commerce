@@ -13,6 +13,8 @@ import {
   Alert,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import './itemdetail.css'
 
 const ItemDetail = ({ prods }) => {
   const { id } = useParams();
@@ -26,7 +28,7 @@ const ItemDetail = ({ prods }) => {
         <div key={prod.id}>
           <Center p="1rem">
             <Card className="card-main">
-              <CardBody>
+              <CardBody className="carta">
                 <Image borderRadius="lg"  />
                 <Stack mt="6" spacing="3">
                   <Heading size="md">{prod.name}</Heading>
@@ -46,6 +48,13 @@ const ItemDetail = ({ prods }) => {
               </CardBody>
               <Divider />
               <CardFooter className="card-footer">
+              <Button bg='tomato' colorScheme='teal' color='black' size='md'>
+                <Link to="/menu">Volver al Menu</Link>
+                </Button>
+                <Button bg='tomato' colorScheme='teal' color='black' size='md'>
+                Agregar al carrito
+                
+                </Button>
               </CardFooter>
             </Card>
           </Center>

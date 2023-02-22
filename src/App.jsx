@@ -6,6 +6,8 @@ import About from './components/about/About'
 import Footer from './components/Footer'
 import Contact from './components/contact/Contact'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import ItemDetail from './components/itemdetail/ItemDetail'
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 const App = () => {
 
@@ -26,6 +28,7 @@ const App = () => {
             path="/menu/:menu"
             element={<ItemListContainer />}
           />
+          <Route exact path="/item/:id" element={<ItemDetailContainer/>} />
         </Routes>
 
        <Footer />
