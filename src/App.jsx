@@ -21,6 +21,11 @@ const App = () => {
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/contact" element={<Contact/>}/>
           <Route exact path="/menu" element={<ItemListContainer/>}/>
+          <Route
+            exact
+            path="/menu/:menu"
+            element={<ItemListContainer />}
+          />
         </Routes>
 
        <Footer />

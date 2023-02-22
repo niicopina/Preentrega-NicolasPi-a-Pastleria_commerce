@@ -6,7 +6,8 @@
       "description":
         "Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 3,
-      "category": "Pastel"
+      "category": "Pastel",
+      "image": "./src/assets/cheesecacke2.jpg"
     },
     {
       "id": 2,
@@ -15,7 +16,8 @@
       "description":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. igendi ducimus numquam quibusdam minima.",
       "stock": 8,
-      "category": "Horneados"
+      "category": "Horneados",
+      "image": "./src/assets/cheesecacke2.jpg"
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "description":
         "Lor ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 30,
-      "category": "Festivos"
+      "category": "Festivos",
+      "image": "./src/assets/cheesecacke2.jpg"
     },
     {
       "id": 4,
@@ -33,7 +36,8 @@
       "description":
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
-      "category": "Personalizados"
+      "category": "Personalizados",
+      "image": "./src/assets/cheesecacke2.jpg"
     },
     {
       "id": 5,
@@ -42,6 +46,7 @@
       "description":
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
-      "category": "Pastel"
+      "category": "Pastel",
+      "image": "./src/assets/cheesecacke2.jpg"
     }
   ]
