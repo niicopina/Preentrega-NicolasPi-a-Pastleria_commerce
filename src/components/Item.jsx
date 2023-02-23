@@ -1,9 +1,9 @@
 import React from 'react'
 import {Center, Card, CardBody, Image, Heading, Text, Divider, Stack, CardFooter, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom"
-import image from "../data.json";
 
-const Item = ({id, name, stock, category}) => {
+
+const Item = ({id, name, stock, category, image}) => {
   return (
     <>
     <div key={id}>

@@ -4,24 +4,24 @@ import './contact.css'
 const Contact = () => {
   return (
     <div>
-        <div class="contact section" id="contact">
-        <div class="main-contact">
+        <div className="contact section" id="contact">
+        <div className="main-contact">
             
-            <div class="contact-content">
+            <div className="contact-content">
                 <h4>Partner</h4>
                 <li><a href="">Food Panda</a></li>
                 <li><a href="">CupMania</a></li>
                 <li><a href="#menu">Food Fun</a></li>
                 <li><a href="#contact">BT Services</a></li>
             </div>
-            <div class="contact-content">
+            <div className="contact-content">
                 <h4>Contacto</h4>
                 <li><a href="#home">Contactanos</a></li>
                 <li><a href="#about">Redes</a></li>
                 <li><a href="#menu">Conocimientos</a></li>
                 <li><a href="#contact">Faq</a></li>
             </div>
-            <div class="contact-content">
+            <div className="contact-content">
                 <h4>Seguinos</h4>
                 <li><a href="#home">Facebook</a></li>
                 <li><a href="#about">Instagram</a></li>
