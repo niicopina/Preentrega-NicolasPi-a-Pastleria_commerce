@@ -17,7 +17,7 @@
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. igendi ducimus numquam quibusdam minima.",
       "stock": 8,
       "category": "Muffins",
-      "image": "/assets/cheesecacke2.jpg"
+      "image": "/assets/cupcakes mundial.jpg"
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
       "category": "Personalizados",
-      "image": "/assets/cheesecacke2.jpg"
+      "image": "/assets/footbol tortas.jpg"
     },
     {
       "id": 5,
@@ -47,17 +47,17 @@
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
       "category": "Pasteles",
-      "image": "/assets/cheesecacke2.jpg"
+      "image": "/assets/tiramisu.jpg"
     },
     {
       "id": 6,
-      "name": "Lemon Pie",
+      "name": "Paletas dulces",
       "price": 4000,
       "description":
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
       "category": "Pasteles",
-      "image": "/assets/cheesecacke2.jpg"
+      "image": "/assets/paletas cackes.jpg"
     },
     {
       "id": 7,
@@ -67,6 +67,6 @@
         "Lorem ipsum dolor sit ameticabo ab, cumque eligendi ducimus numquam quibusdam minima.",
       "stock": 5,
       "category": "Muffins",
-      "image": "/assets/cheesecacke2.jpg"
+      "image": "/assets/cupcakes mundial.jpg"
     }
   ]

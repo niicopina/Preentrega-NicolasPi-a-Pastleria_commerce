@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({id}) => {
   const { category } = useParams();
   const catFilter = Data.filter((prod) => prod.category === category);
 
@@ -28,7 +28,7 @@ const ItemListContainer = () => {
             Filtrar MENU por categorías
           </MenuButton>
           <MenuList>
-            <Link to={`/category/${"Pasteles"}`}>
+            <Link to={`/item/${id}`}>
               <MenuItem>Pasteles</MenuItem>
             </Link>
     

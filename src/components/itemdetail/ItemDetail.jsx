@@ -29,7 +29,7 @@ const ItemDetail = ({ prods }) => {
           <Center p="1rem">
             <Card className="card-main">
               <CardBody className="carta">
-                <Image borderRadius="lg"  />
+                <Image className="imagesize" borderRadius="md" src={prod.image} />
                 <Stack mt="6" spacing="3">
                   <Heading size="md">{prod.name}</Heading>
                   <Text color="blue.800" fontSize="l">
