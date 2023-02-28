@@ -7,12 +7,13 @@ import Footer from './components/Footer'
 import Contact from './components/contact/Contact'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer'
+import ShoppingCartContext from './context/ShoppingCartContext'
 
 const App = () => {
 
   return (
     <div>
-      
+      <ShoppingCartContext>
       <BrowserRouter>
         <NavBar />
         
@@ -32,6 +33,7 @@ const App = () => {
 
        <Footer />
       </BrowserRouter>
+      </ShoppingCartContext>
     </div>
   )
 }
