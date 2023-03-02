@@ -12,9 +12,10 @@ import {
   Divider,
   Alert,
 } from "@chakra-ui/react";
-import { useParams } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import { Link } from 'react-router-dom'
 import './itemdetail.css'
+import Loading from '../Loading';
 
 const ItemDetail = ({ prods }) => {
   const { id } = useParams();
@@ -48,12 +49,12 @@ const ItemDetail = ({ prods }) => {
               </CardBody>
               <Divider />
               <CardFooter className="card-footer">
-              <Button bg='tomato' colorScheme='teal' color='black' size='md'>
-                <Link to="/menu">Volver al Menu</Link>
-                </Button>
                 <Button bg='tomato' colorScheme='teal' color='black' size='md'>
-                Agregar al carrito
+                  <Link to="/menu">Volver al Menu</Link>
+                </Button>
                 
+                <Button bg='tomato' colorScheme='teal' color='black' size='md'>
+                    Agregar al carrito
                 </Button>
               </CardFooter>
             </Card>

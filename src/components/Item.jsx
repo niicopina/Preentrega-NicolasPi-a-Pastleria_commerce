@@ -11,7 +11,7 @@ const Item = ({id, name, stock, category, image}) => {
     <Center p="1rem">
           <Card className="card-main">
             <CardBody>
-              <img src={"/menu/image"} />
+              <Image src={image} />
               <Stack mt="6" spacing="3">
                 <Heading size="md">{name}</Heading>
 

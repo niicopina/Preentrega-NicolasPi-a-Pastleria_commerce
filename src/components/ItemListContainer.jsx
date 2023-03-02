@@ -1,6 +1,6 @@
 import React from 'react'
 import Data from '../data.json'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import { Center, Button } from "@chakra-ui/react";
@@ -16,22 +16,24 @@ import {
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const ItemListContainer = ({id}) => {
-  const { category } = useParams();
+const ItemListContainer = () => {
+  //const { category } = useParams();
+  const [category, setCategory] = useState('');
   const catFilter = Data.filter((prod) => prod.category === category);
+  
 
+  const handleChange = (event) => {
+    setCategory(event.target.value);
+  };
   return (
     <div className="categorias-titulo">
       <Center bg="tomato" h="120px" color="black" display="flex" alignItems="center">
         <Menu>
-          <MenuButton as={Button} >
+          <MenuButton as={Button} value={category} onChange={handleChange}>
             Filtrar MENU por categorías
           </MenuButton>
           <MenuList>
-            <Link to={`/item/${id}`}>
-              <MenuItem>Pasteles</MenuItem>
-            </Link>
-    
+              <MenuItem >Pasteles</MenuItem>    
               <MenuItem>Muffins</MenuItem>
               <MenuItem>Festivos</MenuItem>
               <MenuItem>Personalizados</MenuItem>
@@ -41,8 +43,9 @@ const ItemListContainer = ({id}) => {
       </Center>
       {category ? <ItemList prods={catFilter} /> : <ItemList prods={Data} />}
         
-    </div>
-  )
+    </div>)
 }
+  
+
 
 export default ItemListContainer
