@@ -26,7 +26,7 @@ const ItemDetail = ({ prods }) => {
       {prodFilter.map((prod) => (
         <div key={prod.id}>
           <Center p="1rem">
-            <Card className="card-main">
+            <Card bg='#9999' colorScheme='teal' className="card-main">
               <CardBody className="carta">
                 <Image className="imagesize" borderRadius="md" src={prod.image} />
                 <Stack mt="6" spacing="3">

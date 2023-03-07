@@ -80,7 +80,7 @@ const NavBar = () => {
           <Spacer />
           <Box p="10" w="300px" h="100">
             <Link to={"/menu"}>
-              {/* <CartWidget /> */}
+              <CartWidget />
             </Link>
           </Box>
         </Flex>

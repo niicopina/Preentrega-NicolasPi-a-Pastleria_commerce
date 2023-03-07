@@ -16,7 +16,7 @@ import { CartContext } from "../context/ShoppingCartContext";
 //import SendOrder from "./SendOrder";
 
 const Cart = () => {
-  const [cart, setCart] = useContext(CartContext);
+  const {cart, setCart} = useContext(CartContext);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 

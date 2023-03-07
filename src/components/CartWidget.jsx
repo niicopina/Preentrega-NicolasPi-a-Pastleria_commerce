@@ -1,9 +1,11 @@
 import { Button } from "@chakra-ui/react";
 import { useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
+import { Link } from "react-router-dom";
+import Cart from './Cart'
 
 const CartWidget = () => {
-  const [cart, setCart] = useContext(CartContext);
+  const {cart, setCart} = useContext(CartContext);
   const quantity = cart.reduce((acc, curr) => {
     return acc + curr.quantity;
   }, 0);
@@ -12,8 +14,10 @@ const CartWidget = () => {
     <>
       <div className="cart">
         <Button size="lg" variant="outline" colorScheme="orange">
-          <span className="material-symbols-outlined">shopping_cart</span>
+         <Link to={"/cart"}>
+         <span className="material-symbols-outlined">shopping_cart</span>
           <span>{quantity}</span>
+         </Link> 
         </Button>
       </div>
     </>
