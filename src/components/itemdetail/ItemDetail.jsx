@@ -13,13 +13,14 @@ import {
   Alert,
 } from "@chakra-ui/react";
 import { useParams} from "react-router-dom";
-import { Link } from 'react-router-dom'
 import './itemdetail.css'
-import Loading from '../Loading';
+import ItemCount from "../ItemCount";
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ prods }) => {
   const { id } = useParams();
   // console.log(id);
+  //const [producto, setProducto] = useState([]);
 
   const prodFilter = prods.filter((prod) => prod.id == id);
 
@@ -55,7 +56,15 @@ const ItemDetail = ({ prods }) => {
                 
                 <Button bg='tomato' colorScheme='teal' color='black' size='md'>
                     Agregar al carrito
+                    
                 </Button>
+                {/* <ItemCount
+                  stock={prod.stock}
+                  id={prod.id}
+                  price={prod.price}
+                  name={prod.name}
+                />
+               */}
               </CardFooter>
             </Card>
           </Center>

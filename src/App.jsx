@@ -7,33 +7,30 @@ import Footer from './components/Footer'
 import Contact from './components/contact/Contact'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer'
+
+import Cart from "./components/Cart";
 import ShoppingCartContext from './context/ShoppingCartContext'
 
 const App = () => {
 
   return (
     <div>
-      <ShoppingCartContext>
+    <ShoppingCartContext>
       <BrowserRouter>
-        <NavBar />
-        
-        <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route exact path="/home" element={<Home/>} />
-          <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/contact" element={<Contact/>}/>
-          <Route exact path="/menu" element={<ItemListContainer/>}/>
-          <Route
-            exact
-            path="/menu/:menu"
-            element={<ItemListContainer />}
-          />
-          <Route exact path="/item/:id" element={<ItemDetailContainer/>} />
-        </Routes>
-
-       <Footer />
+        <NavBar />        
+          <Routes>
+            <Route exact path="/" element={<Home/>} />
+            <Route exact path="/home" element={<Home/>} />
+            <Route exact path="/about" element={<About/>}/>
+            <Route exact path="/contact" element={<Contact/>}/>
+            <Route exact path="/menu" element={<ItemListContainer/>}/>
+            <Route exact path="/menu/:menu" element={<ItemListContainer />}/>
+            <Route exact path="/item/:id" element={<ItemDetailContainer/>} />
+            <Route exact path="/cart" element={<Cart />} />
+          </Routes>
+        <Footer />
       </BrowserRouter>
-      </ShoppingCartContext>
+    </ShoppingCartContext>
     </div>
   )
 }

@@ -16,24 +16,21 @@ import {
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({id}) => {
   //const { category } = useParams();
-  const [category, setCategory] = useState('');
+  const {category} = useParams();
+
   const catFilter = Data.filter((prod) => prod.category === category);
   
-
-  const handleChange = (event) => {
-    setCategory(event.target.value);
-  };
   return (
-    <div className="categorias-titulo">
+       <div className="categorias-titulo">
       <Center bg="tomato" h="120px" color="black" display="flex" alignItems="center">
         <Menu>
-          <MenuButton as={Button} value={category} onChange={handleChange}>
+          <MenuButton as={Button} >
             Filtrar MENU por categorías
           </MenuButton>
           <MenuList>
-              <MenuItem >Pasteles</MenuItem>    
+          <Link to={`/menu/${id}`}><MenuItem>Pasteles</MenuItem></Link>   
               <MenuItem>Muffins</MenuItem>
               <MenuItem>Festivos</MenuItem>
               <MenuItem>Personalizados</MenuItem>
