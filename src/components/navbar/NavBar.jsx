@@ -16,7 +16,7 @@ const NavBar = () => {
             <li><Link to={"/about"}>Acerca de</Link></li>
             <li><Link to={"/menu"}>Menu</Link></li>
             <li><Link to={"/contact"}>Contacto</Link></li>
-            <li><CartWidget/></li>
+            <li><a href="/cart"><i className='bx bx-cart' ></i></a></li>
         </ul>
         
         {/* <div className="h-icons">
