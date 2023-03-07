@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import {createContext, useContext, useState} from 'react'
 
 
@@ -8,7 +8,7 @@ export const {Provider} = CartContext;
 
 export const useCartContext = () => {
     return useContext(CartContext);
-}
+} */
 
 /* 
 si tengo prod a , b y c - importa el stock agregado pero no el que se descuenta

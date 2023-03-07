@@ -12,7 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useState, useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../context/ShoppingCartContext";
 //import SendOrder from "./SendOrder";
 
 const Cart = () => {

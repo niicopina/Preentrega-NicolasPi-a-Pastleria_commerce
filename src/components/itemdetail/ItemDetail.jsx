@@ -21,7 +21,11 @@ const ItemDetail = ({ prods }) => {
   const { id } = useParams();
   // console.log(id);
   //const [producto, setProducto] = useState([]);
+/* 
+ const oneItem = doc(db, "xx", `${id}`)
 
+
+ */
   const prodFilter = prods.filter((prod) => prod.id == id);
 
   return (

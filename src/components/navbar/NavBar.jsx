@@ -2,7 +2,6 @@ import React from 'react'
 import CartWidget from '../CartWidget'
 import './navbar.css'
 import { Link } from "react-router-dom";
-import { Box } from '@chakra-ui/react';
 
 const NavBar = () => {
   return (
@@ -17,7 +16,7 @@ const NavBar = () => {
             <li><Link to={"/about"}>Acerca de</Link></li>
             <li><Link to={"/menu"}>Menu</Link></li>
             <li><Link to={"/contact"}>Contacto</Link></li>
-            
+            <li><CartWidget/></li>
         </ul>
         
         {/* <div className="h-icons">
