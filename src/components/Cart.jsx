@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
+import '../index.css'
+
 //import SendOrder from "./SendOrder";
 
 const Cart = () => {
@@ -35,8 +37,8 @@ const Cart = () => {
   return (
     <>
       <Center bg="#D6EAF8" h="100px" color="black">
-        <Heading as="h2" size="2xl">
-          Cart     =    <Text as="b">Precio total: $ {totalPrice}</Text>
+        <Heading className="head-carro" as="h2" size="2xl">
+          Carrito     =    <Text as="b">Precio total: $ {totalPrice}</Text>
         </Heading>
       </Center>
       {cart.map((item) => {
