@@ -2,7 +2,6 @@ import { Button } from "@chakra-ui/react";
 import { useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
-import Cart from './Cart'
 
 const CartWidget = () => {
   const {cart, setCart} = useContext(CartContext);

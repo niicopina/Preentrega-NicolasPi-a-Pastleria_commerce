@@ -1,11 +1,12 @@
 import React from 'react'
 import Item from './Item'
 import { Container } from "@chakra-ui/react";
+import '../index.css'
 
 const ItemList = ({prods}) => {
   return (
     <div>
-        <Container maxW="container.sm" className="main-catalogue">
+        <Container maxW="container.sm" className="main-catalogue1">
             {prods?.map((prod)=> (
                 <Item
                 key={prod.id}

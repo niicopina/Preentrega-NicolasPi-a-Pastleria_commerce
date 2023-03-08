@@ -35,8 +35,8 @@ const Cart = () => {
                 <Heading size="md">{item.name}</Heading>
               </CardHeader>
               <CardBody>
-                <Text as="b">Quantity: {item.quantity}</Text>
-                <Text>Price: $ {item.price}</Text>
+                <Text as="b">Cantidad: {item.quantity}</Text>
+                <Text>Precio: $ {item.price}</Text>
               </CardBody>
               <CardFooter>
                 <Button
@@ -47,7 +47,10 @@ const Cart = () => {
                 </Button>
               </CardFooter>
             </Card>
+            <Text>total por unidades: $ {item.price * item.quantity}</Text>
+            
           </Container>
+          
         );
       })}
     {/* <SendOrder /> */}

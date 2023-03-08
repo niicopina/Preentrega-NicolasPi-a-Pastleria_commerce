@@ -12,23 +12,42 @@ import {
   Divider,
   Alert,
 } from "@chakra-ui/react";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import './itemdetail.css'
 import ItemCount from "../ItemCount";
 import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ prods }) => {
   const { id } = useParams();
-  const prodFilter = prods.filter((prod) => prod.id == id);
+  //const prodFilter = prods.filter((prod) => prod.id == id);
+  const [product, setProduct] = useState([]);
+
+  useEffect(()=>{
+    const db = getFirestore();
+
+    const prodRef = doc(db, "productos", "IGDksdve3ezhIiEysQOs");
+
+    getDoc(prodRef).then((snapshot) => {
+      if (snapshot.exists()){
+        setProduct(snapshot.data());
+      } else {
+        console.log("No data!")
+      }
+    })
+  }, []);
+
+  const prodFilter = prods.filter((prod)=> prod.id == id)
 
   return (
     <>
       {prodFilter.map((prod) => (
-        <div key={prod.id}>
-          <Center p="1rem">
+        <div className='items' key={prod.id}>
+          <Center className='card-main' p="1rem">
             <Card bg='#9999' colorScheme='teal' className="card-main">
               <CardBody className="carta">
-                <Image className="imagesize" borderRadius="md" src={prod.image} />
+                <Image borderRadius="md" src={prod.image} />
                 <Stack mt="6" spacing="3">
                   <Heading size="md">{prod.name}</Heading>
                   <Text color="blue.800" fontSize="l">

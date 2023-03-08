@@ -21,24 +21,14 @@
 span{
     color: var(--main-color);
 }
-/* .navbar-items a{
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: var(--p-font);
-    font-weight: 600;
-    padding: 5px 10px;
-    margin: 2px 25px;
-    border-bottom: 0.5px solid transparent;
-    transition: all .38s ease;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
+
 .navbar a:hover{
     border-bottom: 2px solid var(--main-color);
     color: var(--main-color);
 }
-
+.cont-nav {
+    height: 160px;
+}
 
 /* .h-icons{
     display: flex;

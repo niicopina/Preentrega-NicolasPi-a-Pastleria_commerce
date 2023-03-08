@@ -1,7 +1,7 @@
 import React from 'react'
 import {Center, Card, CardBody, Image, Heading, Text, Divider, Stack, CardFooter, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom"
-import Data from '../data.json'
+import '../index.css'
 
 const Item = ({id, name, stock, category, image}) => {
   
@@ -11,7 +11,7 @@ const Item = ({id, name, stock, category, image}) => {
     <Center p="1rem">
           <Card className="card-main">
             <CardBody>
-              <Image src={image} />
+              <Image className="imagesize" src={image} />
               <Stack mt="6" spacing="3">
                 <Heading size="md">{name}</Heading>
 
