@@ -20,6 +20,11 @@ const Cart = () => {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
+  const [contador, setContador] = useState(0);
+  
+  const sumar = () => {
+    setContador (contador + 1);
+  }
   return (
     <>
       <Center bg="#D6EAF8" h="100px" color="black">
@@ -41,10 +46,27 @@ const Cart = () => {
               <CardFooter>
                 <Button
                   colorScheme="red"
-                  onClick={() => console.log("Eliminando")}
-                >
-                  quitar de la carta
+                  onClick={() =>{
+                  setContador(0);  
+                  console.log("Eliminando")}}>
+                  quitar
                 </Button>
+                <Button colorScheme="green" onClick={sumar}>+</Button>
+                <Button colorScheme="blue" onClick={()=>{
+                      setContador(contador - 1);
+                      }}>-</Button>
+
+
+                {/* <Button onClick={sumar}>Sumar</Button>
+                <Button onClick={()=>{
+                      setContador(contador - 1);
+                      }}>Restar
+                      </Button>
+                      <Button onClick={()=>{
+                        setContador(0);
+                      }}>
+                          Reset
+                      </Button> */}
               </CardFooter>
             </Card>
             <Text>total por unidades: $ {item.price * item.quantity}</Text>

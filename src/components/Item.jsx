@@ -9,7 +9,7 @@ const Item = ({id, name, stock, category, image}) => {
     <>
     <div key={id}>
     <Center p="1rem">
-          <Card className="card-main">
+          <Card className="card-main card-item">
             <CardBody>
               <Image className="imagesize" src={image} />
               <Stack mt="6" spacing="3">
