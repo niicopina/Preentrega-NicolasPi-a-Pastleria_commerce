@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
+import ItemCount from "./ItemCount";
 //import SendOrder from "./SendOrder";
 
 const Cart = () => {
@@ -21,7 +22,14 @@ const Cart = () => {
   const [userEmail, setUserEmail] = useState("");
 
   const [contador, setContador] = useState(0);
-  
+
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const handleDelete = (itemId) => {
+    const updatedCart = cart.filter((item) => item.id !== itemId);
+    setCart(updatedCart);
+  };
+
+
   const sumar = () => {
     setContador (contador + 1);
   }
@@ -29,7 +37,7 @@ const Cart = () => {
     <>
       <Center bg="#D6EAF8" h="100px" color="black">
         <Heading as="h2" size="2xl">
-          Cart
+          Cart     =    <Text as="b">Precio total: $ {totalPrice}</Text>
         </Heading>
       </Center>
       {cart.map((item) => {
@@ -44,35 +52,12 @@ const Cart = () => {
                 <Text>Precio: $ {item.price}</Text>
               </CardBody>
               <CardFooter>
-                <Button
-                  colorScheme="red"
-                  onClick={() =>{
-                  setContador(0);  
-                  console.log("Eliminando")}}>
-                  quitar
-                </Button>
-                <Button colorScheme="green" onClick={sumar}>+</Button>
-                <Button colorScheme="blue" onClick={()=>{
-                      setContador(contador - 1);
-                      }}>-</Button>
-
-
-                {/* <Button onClick={sumar}>Sumar</Button>
-                <Button onClick={()=>{
-                      setContador(contador - 1);
-                      }}>Restar
-                      </Button>
-                      <Button onClick={()=>{
-                        setContador(0);
-                      }}>
-                          Reset
-                      </Button> */}
+                <Button colorScheme="red" onClick={() =>handleDelete(item.id)}>Eliminar</Button>
+                <Button colorScheme="green" size="sm"><ItemCount/></Button>
               </CardFooter>
-            </Card>
-            <Text>total por unidades: $ {item.price * item.quantity}</Text>
-            
+              <Text>total por unidades: $ {item.price * item.quantity}</Text>
+            </Card>        
           </Container>
-          
         );
       })}
     {/* <SendOrder /> */}

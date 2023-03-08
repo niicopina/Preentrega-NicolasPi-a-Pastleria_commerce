@@ -3,7 +3,6 @@ import CartWidget from '../CartWidget'
 import './navbar.css'
 import { Link } from "react-router-dom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { useParams} from "react-router-dom";
 import {
   Flex,
   Box,
@@ -18,11 +17,12 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 
-const NavBar = () => {
+
+const NavBar = ({id, category}) => {
 
   return (
     <>
-    <div className='navbar'>
+    <div className='navbar' key={id}>
       <Container className='cont-nav' maxW="200rem" color="#262626">
           <Flex alignItems="center" gap="1">
             <Link to={"/"}><Avatar size="x1" src="/assets/logo.jpg"/></Link>
@@ -57,10 +57,10 @@ const NavBar = () => {
                   Categorias
                 </MenuButton>
                 <MenuList className="menu-list">
-                  <Link to={`/category/${"Pasteles"}`}>
-                    <MenuItem>Pasteles</MenuItem>
-                  </Link>
-                  <Link to={`menu/:id"}`}>
+                <Link to={`/item/${category}`}>
+                    <MenuItem>Pasteles{category}</MenuItem>
+                    </Link>
+                  <Link to={`/category/${"Muffins"}`}>
                     <MenuItem>Muffins</MenuItem>
                   </Link>
                   <Link to={`/category/${"Festivos"}`}>
@@ -86,8 +86,8 @@ const NavBar = () => {
           </Flex>
       </Container>
     </div>
-    </>
-      )
+   </>
+    )
 }
 
 export default NavBar
