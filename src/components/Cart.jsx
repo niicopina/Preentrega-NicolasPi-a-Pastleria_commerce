@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
-import ItemCount from "./ItemCount";
 //import SendOrder from "./SendOrder";
 
 const Cart = () => {
@@ -53,7 +52,6 @@ const Cart = () => {
               </CardBody>
               <CardFooter>
                 <Button colorScheme="red" onClick={() =>handleDelete(item.id)}>Eliminar</Button>
-                <Button colorScheme="green" size="sm"><ItemCount/></Button>
               </CardFooter>
               <Text>total por unidades: $ {item.price * item.quantity}</Text>
             </Card>        
