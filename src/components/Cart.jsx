@@ -14,8 +14,8 @@ import {
 import { useState, useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
 import '../index.css'
-
-//import SendOrder from "./SendOrder";
+import { Link } from "react-router-dom";
+import SendOrder from "./SendOrder";
 
 const Cart = () => {
   const {cart, setCart} = useContext(CartContext);
@@ -41,6 +41,7 @@ const Cart = () => {
           Carrito     =    <Text as="b">Precio total: $ {totalPrice}</Text>
         </Heading>
       </Center>
+      <Button bg='tomato' colorScheme='teal' color='black' size='md'><Link to="/menu">Volver al Menu</Link></Button>
       {cart.map((item) => {
         return (
           <Container key={item.id} className="main-catalogue">
@@ -60,7 +61,9 @@ const Cart = () => {
           </Container>
         );
       })}
-    {/* <SendOrder /> */}
+      <div>
+      <SendOrder />
+      </div>
     </>
   );
 };

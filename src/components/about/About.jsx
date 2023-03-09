@@ -1,6 +1,7 @@
 import React from 'react'
 import './about.css'
-
+import { Button } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <div>
@@ -13,9 +14,10 @@ const About = () => {
             <p> Comenzamos el recorrido enfocadas en la pastelería, así nuestra experiencia año tras año
             se eleva para continuar buscando sabores elevados logrando una consitencia en el Servicio
             que desumbra a cada cliente </p>
-            <a href="./menu.html" class="btn" id="btn">Haz tu pedido</a>
+            <Button bg='tomato' colorScheme='teal' color='black' size='md'><Link to="/menu">Ir al Menu</Link></Button>
         </div>
       </div>
+      
     </div>
   )
 }
