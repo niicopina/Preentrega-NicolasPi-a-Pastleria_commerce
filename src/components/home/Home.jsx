@@ -3,6 +3,7 @@ import './home.css'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
+//Descripción breve del negocio
 const Home = () => {
   return (
     <div>

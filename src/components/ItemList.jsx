@@ -3,6 +3,7 @@ import Item from './Item'
 import { Container } from "@chakra-ui/react";
 import '../index.css'
 
+//Este componente detalla la información de cada producto
 const ItemList = ({prods}) => {
   return (
     <div>

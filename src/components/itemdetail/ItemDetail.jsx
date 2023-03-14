@@ -6,6 +6,7 @@ import './itemdetail.css'
 import ItemCount from "../ItemCount";
 import { Link } from 'react-router-dom';
 
+//En este componente se detalla el item seleccionado
 const ItemDetail = ({ prods }) => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
@@ -41,12 +42,13 @@ const ItemDetail = ({ prods }) => {
           </div>
           <div class="card-footer">
             <button class="btn btn-primary"><Link to="/menu">Volver al menu</Link></button>
-            <button class="btn btn-secondary"><ItemCount
-                        stock={prod.stock}
-                        id={prod.id}
-                        price={prod.price}
-                        name={prod.name}
-                      /></button>
+            <button class="btn btn-secondary">
+              <ItemCount
+               stock={prod.stock}
+               id={prod.id}
+               price={prod.price}
+               name={prod.name} />
+            </button>
         </div>
       </div>
       ))}

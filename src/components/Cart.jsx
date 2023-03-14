@@ -10,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+//Este componente muestra los productos seleccionados y sus totales $
 const Cart = () => {
   const {cart, setCart} = useContext(CartContext);
 

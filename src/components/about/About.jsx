@@ -2,6 +2,8 @@ import React from 'react'
 import './about.css'
 import { Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+
+//Acerca de la compañía
 const About = () => {
   return (
     <div>

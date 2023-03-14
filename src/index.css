@@ -30,8 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto)); */
   gap: 2rem;
   align-items: center;
   margin-top: 3rem;

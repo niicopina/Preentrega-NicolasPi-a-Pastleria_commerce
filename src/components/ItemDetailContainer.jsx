@@ -1,9 +1,9 @@
 import React from 'react'
 import ItemDetail from "./itemdetail/ItemDetail";
 import { useState, useEffect } from "react";
-//import Data from "../data.json";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
+//Este componente muestra todos los productos disponibles
 const ItemDetailContainer = () => {
     const [data, setData] = useState([])
     useEffect(()=>{

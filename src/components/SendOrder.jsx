@@ -13,6 +13,7 @@ import {
   import { useState } from "react";
   import '../index.css'
   
+  //Sección de formulario para efectuar la compra, devuelve un Order ID
   const SendOrder = () => {
     const [orderId, setOrderId] = useState(null);
     const [name, setName] = useState("");
