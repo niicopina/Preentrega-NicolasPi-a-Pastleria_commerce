@@ -84,36 +84,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-{/* 
-import { Flex, Spacer } from '@chakra-ui/react'
-import {
-  Button,
-  Container,
-  Box,
-  Textarea,
-  Center,
-  Heading,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Text,
-} from "@chakra-ui/react";
-<div className="carrito-div">
-          <Container key={item.id} className="main-catalogue-carro">
-            <Card w='280px' direction="row" className="carta-carro" maxW="sm">
-              <CardHeader>
-                <Heading size="md">{item.name}</Heading>
-              </CardHeader>
-              <CardBody >
-                <Text as="b">Cantidad: {item.quantity}</Text>
-                <Text>Precio: $ {item.price}</Text>
-              </CardBody>
-              <CardFooter>
-                <Button colorScheme="red" onClick={() =>handleDelete(item.id)}>Eliminar</Button>
-              </CardFooter>
-              <Text>total por unidades: $ {item.price * item.quantity}</Text>
-            </Card>        
-          </Container>
-          </div> */}

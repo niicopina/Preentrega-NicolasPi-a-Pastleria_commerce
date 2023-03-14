@@ -61,6 +61,7 @@
 .carrito-container {
   display: flex;
   flex-direction: row;
+  
 }
 .carrito-div {
   display: flex;
@@ -73,18 +74,20 @@
   margin: 0rem 1rem;
   padding: 20px;
   flex-basis: calc(50% - 2rem);
-  
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   flex-grow: 1;
 }
 
 .carta-carro {
-  background: #ebbeba;
+  
   margin: 1rem 0;
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
+  
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .carta-carro h3 {
   font-weight: bold;
@@ -93,12 +96,16 @@
 }
 .detalles-items{
   margin: 1rem 1rem;
+  
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .detalles-items p {
   font-weight: bold;
   font-size: 18px;
   color: #3b546f;
   padding: 3px;
+  
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .div-eliminar{
   margin: 0 1rem;
@@ -118,7 +125,7 @@
   margin: 1rem 1rem;
   padding: 10px;
   font-size: 1rem;
-  background-color: #aa7c77;
+  box-shadow: rgba(34, 12, 46, 0.15) 2px 48px 100px 0px;
   border-radius: 10px;
   color: #030506;
   font-size: 18px;
@@ -172,4 +179,19 @@
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+/*Estilos footer  */
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+  background: #e7e9ec;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-size: 18px;
+  letter-spacing: 1.5px;
 }
