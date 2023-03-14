@@ -1,13 +1,35 @@
 import React from 'react'
-import {Center, Card, CardBody, Image, Heading, Text, Divider, Stack, CardFooter, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom"
 import '../index.css'
 
-const Item = ({id, name, stock, category, image}) => {
+const Item = ({id, name, stock, category, image, price}) => {
   
   return (
     <>
     <div key={id}>
+      <img className="imagesize" src={image} alt="Imagen de producto" />
+        <div className="card-body">
+          <h4 className="card-title">{name}</h4>
+          <p className="card-text">Categoria: {category}</p>
+          <p className="card-text">Stock: {stock}</p>
+          <p className="card-text">Precio: {price}</p>
+        </div>
+        <div className="card-footer">
+          <button className="btn btn-primary">
+          <Link to={`/item/${id}`}>Detalles</Link>
+          </button>
+        </div>
+    </div>
+    </>
+  )
+}
+
+export default Item
+
+
+{/* 
+import {Center, Card, CardBody, Image, Heading, Text, Divider, Stack, CardFooter, Button } from "@chakra-ui/react";
+<div key={id}>
     <Center p="1rem">
           <Card className="card-main card-item">
             <CardBody>
@@ -33,9 +55,4 @@ const Item = ({id, name, stock, category, image}) => {
             </CardFooter>
           </Card>
       </Center>
-    </div>
-    </>
-  )
-}
-
-export default Item
+    </div> */}

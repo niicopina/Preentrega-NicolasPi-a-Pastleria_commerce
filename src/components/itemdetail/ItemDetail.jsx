@@ -1,17 +1,4 @@
 import React from 'react'
-import {
-  Center,
-  Card,
-  CardBody,
-  Image,
-  Stack,
-  Heading,
-  Text,
-  Button,
-  CardFooter,
-  Divider,
-  Alert,
-} from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { doc, getDoc, getFirestore } from "firebase/firestore";
@@ -21,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ prods }) => {
   const { id } = useParams();
-  //const prodFilter = prods.filter((prod) => prod.id == id);
   const [product, setProduct] = useState([]);
 
   useEffect(()=>{
@@ -43,7 +29,49 @@ const ItemDetail = ({ prods }) => {
   return (
     <>
       {prodFilter.map((prod) => (
-        <div className='items' key={prod.id}>
+        <div className="card" key={prod.id}>
+            <img src={prod.image} alt="Imagen de producto" />
+          <div className="card-body">
+            <h4 className="card-title">{prod.name}</h4>
+            <p className="card-text">Descripción: {prod.description}</p>
+            <p className="card-text">Categoría: {prod.category}</p>
+            <p className="card-text">Stock: {prod.stock}</p>
+            <p className="card-text">Precio: $ {prod.price}</p>
+          </div>
+        <div class="card-footer">
+          <button class="btn btn-primary"><Link to="/menu">Volver al menu</Link></button>
+          <button class="btn btn-secondary"><ItemCount
+                        stock={prod.stock}
+                        id={prod.id}
+                        price={prod.price}
+                        name={prod.name}
+                      /></button>
+        </div>
+      </div>
+      ))}
+    </>
+  );
+};
+
+export default ItemDetail;
+
+{/* 
+import {
+  Center,
+  Card,
+  CardBody,
+  Image,
+  Stack,
+  Heading,
+  Text,
+  Button,
+  CardFooter,
+  Divider,
+  Alert,
+} from "@chakra-ui/react";
+
+//const prodFilter = prods.filter((prod) => prod.id == id);
+<div className='items' key={prod.id}>
           <Center className='card-main' p="1rem">
             <Card bg='#9999' colorScheme='teal' className="card-main1">
               <CardBody className="carta">
@@ -83,13 +111,7 @@ const ItemDetail = ({ prods }) => {
               </CardFooter>
             </Card>
           </Center>
-        </div>
-      ))}
-    </>
-  );
-};
-
-export default ItemDetail;
+        </div> */}
 {/* 
 const [contador, setContador] = useState(0);
   

@@ -11,6 +11,7 @@ import {
   } from "@chakra-ui/react";
   import { collection, getFirestore, addDoc } from "firebase/firestore";
   import { useState } from "react";
+  import '../index.css'
   
   const SendOrder = () => {
     const [orderId, setOrderId] = useState(null);
@@ -35,6 +36,7 @@ import {
     const ordersCollection = collection(db, "orden");
     return (
       <div>
+        <div className="form-cart">
         <Center>
           <Heading>Enviar ordenes</Heading>
         </Center>
@@ -42,9 +44,9 @@ import {
           <FormControl>
             <form onSubmit={handleSubmit}>
               <FormLabel>Nombre</FormLabel>
-              <Input size="lg" onChange={(e) => setName(e.target.value)} />
+              <Input size="lg" bg="white" onChange={(e) => setName(e.target.value)} />
               <FormLabel>EMAIL</FormLabel>
-              <Input size="lg" onChange={(e) => setEmail(e.target.value)} />
+              <Input size="lg" bg="white" onChange={(e) => setEmail(e.target.value)} />
               <Button colorScheme="blue" type="submit" m={5}>Enviar Información</Button>
             </form>
           </FormControl>
@@ -53,6 +55,7 @@ import {
           <Text as="b" m={3} fontSize="xl">Orden ID:{" "}</Text>
           <Text as="mark" fontSize="2xl">{orderId}</Text>
         </Center>
+        </div>
       </div>
     );
   };

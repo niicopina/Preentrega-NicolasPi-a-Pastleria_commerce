@@ -7,7 +7,6 @@ import Footer from './components/Footer'
 import Contact from './components/contact/Contact'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer'
-
 import Cart from "./components/Cart";
 import ShoppingCartContext from "./context/ShoppingCartContext";
 

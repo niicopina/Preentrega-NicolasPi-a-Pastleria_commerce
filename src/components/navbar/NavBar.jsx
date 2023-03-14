@@ -17,9 +17,7 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 
-
 const NavBar = ({id, category}) => {
-
   return (
     <>
     <div className='navbar' key={id}>
@@ -45,20 +43,18 @@ const NavBar = ({id, category}) => {
                   </Box>
               <Box>
               <Menu>
-            
                 <MenuButton className='menubtn' 
                   as={Button}
                   size="lg"
                   variant="outline"
                   colorScheme="#262626"
                   rightIcon={<ChevronDownIcon />}
-                  m="5"
-                >
+                  m="5">
                   Categorias
                 </MenuButton>
                 <MenuList className="menu-list">
-                <Link to={`/item/${category}`}>
-                    <MenuItem>Pasteles{category}</MenuItem>
+                    <Link to={`/category/${"Pasteles"}`}>
+                    <MenuItem >Pasteles</MenuItem>
                     </Link>
                   <Link to={`/category/${"Muffins"}`}>
                     <MenuItem>Muffins</MenuItem>
