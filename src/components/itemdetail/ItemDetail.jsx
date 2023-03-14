@@ -28,19 +28,20 @@ const ItemDetail = ({ prods }) => {
 
   return (
     <>
+      <div className='card-detail-container'>
       {prodFilter.map((prod) => (
-        <div className="card" key={prod.id}>
+        <div className="card-detail" key={prod.id}>
             <img src={prod.image} alt="Imagen de producto" />
           <div className="card-body">
             <h4 className="card-title">{prod.name}</h4>
-            <p className="card-text">Descripción: {prod.description}</p>
-            <p className="card-text">Categoría: {prod.category}</p>
-            <p className="card-text">Stock: {prod.stock}</p>
-            <p className="card-text">Precio: $ {prod.price}</p>
+            <p className="card-text">DESCRIPCIÓN: {prod.description}</p>
+            <p className="card-text">CATEGORÍA: {prod.category}</p>
+            <p className="card-text">STOCK: {prod.stock}</p>
+            <p className="card-text">PRECIO: $ {prod.price}</p>
           </div>
-        <div class="card-footer">
-          <button class="btn btn-primary"><Link to="/menu">Volver al menu</Link></button>
-          <button class="btn btn-secondary"><ItemCount
+          <div class="card-footer">
+            <button class="btn btn-primary"><Link to="/menu">Volver al menu</Link></button>
+            <button class="btn btn-secondary"><ItemCount
                         stock={prod.stock}
                         id={prod.id}
                         price={prod.price}
@@ -49,6 +50,7 @@ const ItemDetail = ({ prods }) => {
         </div>
       </div>
       ))}
+    </div>
     </>
   );
 };
