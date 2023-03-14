@@ -6,7 +6,7 @@ import '../index.css'
 const ItemList = ({prods}) => {
   return (
     <div>
-        <Container maxW="container.sm" className="main-catalogue1">
+        <div className='main-catalogue1'>
             {prods?.map((prod)=> (
                 <Item
                 key={prod.id}
@@ -20,7 +20,7 @@ const ItemList = ({prods}) => {
                 />
             ))}
 
-        </Container>
+        </div>
     </div>
   )
 }

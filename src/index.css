@@ -1,10 +1,10 @@
-.navbar ul {
+/* .navbar ul {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
+} */
 .categorias-titulo {
   margin-top: 5.2rem;
   
@@ -15,27 +15,31 @@
   justify-content: center;
   align-items: center;
 }
-.card-main1 {
-  margin-top: 0;
-  background-color: rgb(210, 124, 124);
-  width: 40%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+
+.imagesize {
+  width: 30%;
+  height: 120px;
 }
 .card-item {
   width: 100%;
 }
 
+/* Estilo ItemList */
 .main-catalogue1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto)); */
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
 }
-.imagesize {
-  width: 100%;
+.card-body {
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /* Estilos para el Cart.jsx */
@@ -126,35 +130,46 @@
 }
 
 /* Estilos para EL ItemDetail */
-.card-footer {
-  background-color: #f8f9fa;
-  border-top: 1px solid #ccc;
+.card-footer-item {
+  background-color: #e3ecf4;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
 }
 
-.btn {
+/* Estilos ItemListContainer */
+.card-main1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+  background: var(--bg-color);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transition: all .38s ease;
+}
+.card-main1:hover {
+  transform: translateX(10px);
+    cursor: pointer;
+}
+.card-main1 h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.card-body-item p {
+  font-weight: 600;
+}
+.btn-detalles {
   border-radius: 5px;
   border: none;
-  color: #fff;
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
+  color: #8b3434;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  color: #651c1c;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

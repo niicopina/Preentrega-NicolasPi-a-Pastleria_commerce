@@ -6,16 +6,16 @@ const Item = ({id, name, stock, category, image, price}) => {
   
   return (
     <>
-    <div key={id}>
+    <div className='card-main1' key={id}>
       <img className="imagesize" src={image} alt="Imagen de producto" />
-        <div className="card-body">
+        <div className="card-body-item">
           <h4 className="card-title">{name}</h4>
           <p className="card-text">Categoria: {category}</p>
           <p className="card-text">Stock: {stock}</p>
           <p className="card-text">Precio: {price}</p>
         </div>
-        <div className="card-footer">
-          <button className="btn btn-primary">
+        <div className="card-footer-item">
+          <button className="btn-detalles">
           <Link to={`/item/${id}`}>Detalles</Link>
           </button>
         </div>
