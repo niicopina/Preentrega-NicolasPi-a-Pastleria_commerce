@@ -17,7 +17,9 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 
-const NavBar = ({id, category}) => {
+const NavBar = ({id}) => {
+
+
   return (
     <>
     <div className='navbar' key={id}>
@@ -42,32 +44,32 @@ const NavBar = ({id, category}) => {
                   </Heading>
                   </Box>
               <Box>
-              <Menu>
-                <MenuButton className='menubtn' 
-                  as={Button}
-                  size="lg"
-                  variant="outline"
-                  colorScheme="#262626"
-                  rightIcon={<ChevronDownIcon />}
-                  m="5">
-                  Categorias
-                </MenuButton>
-                <MenuList className="menu-list">
+                <Menu>
+                  <MenuButton className='menubtn'
+                    as={Button}
+                    size="lg"
+                    variant="outline"
+                    colorScheme=""
+                    rightIcon={<ChevronDownIcon />}
+                    m="5">
+                    Categorias
+                  </MenuButton>
+                  <MenuList className="menu-list">
                     <Link to={`/category/${"Pasteles"}`}>
-                    <MenuItem >Pasteles</MenuItem>
+                      <MenuItem>Pasteles</MenuItem>
                     </Link>
-                  <Link to={`/category/${"Muffins"}`}>
-                    <MenuItem>Muffins</MenuItem>
-                  </Link>
-                  <Link to={`/category/${"Festivos"}`}>
-                    <MenuItem>Festivos</MenuItem>
-                  </Link>
-                  <Link to={`/category/${"Personalizados"}`}>
-                    <MenuItem>Personalizados</MenuItem>
-                  </Link>
-                </MenuList>
-              </Menu>
-            </Box>
+                    <Link to={`/category/${"Muffins"}`}>
+                      <MenuItem>Muffins</MenuItem>
+                    </Link>
+                    <Link to={`/category/${"Festivos"}`}>
+                      <MenuItem>Festivos</MenuItem>
+                    </Link>
+                    <Link to={`/category/${"Personalizados"}`}>
+                      <MenuItem>Personalizados</MenuItem>
+                    </Link>
+                  </MenuList>
+                </Menu>
+              </Box>
             <Box p="10" w="300px" h="100">
               <Heading size="md">
                 <Link to={"/contact"}>Contacto</Link>
@@ -75,9 +77,7 @@ const NavBar = ({id, category}) => {
             </Box>
             <Spacer />
             <Box p="10" w="300px" h="100">
-              <Link to={"/menu"}>
                 <CartWidget />
-              </Link>
             </Box>
           </Flex>
       </Container>

@@ -11,7 +11,9 @@ const Home = () => {
         <div className="home-text">
             <h1><span>Bienvenid@s </span>Pastelería Casera</h1>
             <p>Nos especializamos en pastelería artesanal y tortas decoradas</p>
-            <Button bg='tomato' colorScheme='teal' color='black' size='md'><Link to="/menu">Ir al Menu</Link></Button>
+            <Button bg='tomato' colorScheme='teal' color='black' size='md'>
+              <Link to="/menu">Ir al Menu</Link>
+            </Button>
         </div>
 
         <div className="home-img">

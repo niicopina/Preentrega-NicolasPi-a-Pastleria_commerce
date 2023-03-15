@@ -21,7 +21,6 @@ const ItemListContainer = ({id}) => {
       setProds(prods);
     });
   }, []); 
-  //const catFilter = Data.filter((prod) => prod.category === category);
    const catFilter = prods.filter((prod) => prod.category === category);
 
   return (
@@ -32,19 +31,3 @@ const ItemListContainer = ({id}) => {
     </>)
 }
 export default ItemListContainer
-
-
-{/* <Center bg="tomato" h="120px" color="black" display="flex" alignItems="center">
-        <Menu>
-          <MenuButton as={Button} >
-            Filtrar MENU por categorías
-          </MenuButton>
-          <MenuList>
-          <Link to={`/menu/${id}`}><MenuItem>Pasteles</MenuItem></Link>   
-              <MenuItem>Muffins</MenuItem>
-              <MenuItem>Festivos</MenuItem>
-              <MenuItem>Personalizados</MenuItem>
-          </MenuList>
-          
-        </Menu>
-      </Center> */}
