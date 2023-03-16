@@ -23,64 +23,35 @@ const NavBar = ({id}) => {
   return (
     <>
     <div className='navbar' key={id}>
-      <Container className='cont-nav' maxW="200rem" color="#262626">
-          <Flex alignItems="center" gap="1">
-            <Link to={"/"}><Avatar size="x1" src="/assets/logo.jpg"/></Link>
-            <Box p="10" w="200px" h="100">
-              <Heading size="md">
-                <Link to={"/"}>Home</Link>
-              </Heading>
-            </Box>
-            <Box p="10" w="200px" h="100">
-              <Heading size="md">
-                <Link to={"/about"}>About</Link>
-              </Heading>
-            </Box>
-            <Spacer />
-              <Box>
-                  <Heading className='menubtn' size="md" variant="outline"
-                    colorScheme="#262626" m="1">
-                      <Link to={"/menu/:menu"}>Menu</Link>
-                  </Heading>
-                  </Box>
-              <Box>
-                <Menu>
-                  <MenuButton className='menubtn'
-                    as={Button}
-                    size="lg"
-                    variant="outline"
-                    colorScheme=""
-                    rightIcon={<ChevronDownIcon />}
-                    m="5">
-                    Categorias
-                  </MenuButton>
-                  <MenuList className="menu-list">
-                    <Link to={`/category/${"Pasteles"}`}>
-                      <MenuItem>Pasteles</MenuItem>
-                    </Link>
-                    <Link to={`/category/${"Muffins"}`}>
-                      <MenuItem>Muffins</MenuItem>
-                    </Link>
-                    <Link to={`/category/${"Festivos"}`}>
-                      <MenuItem>Festivos</MenuItem>
-                    </Link>
-                    <Link to={`/category/${"Personalizados"}`}>
-                      <MenuItem>Personalizados</MenuItem>
-                    </Link>
-                  </MenuList>
-                </Menu>
-              </Box>
-            <Box p="10" w="300px" h="100">
-              <Heading size="md">
-                <Link to={"/contact"}>Contacto</Link>
-              </Heading>
-            </Box>
-            <Spacer />
-            <Box p="10" w="300px" h="100">
+      <div className="logo">
+        <img src="/assets/logo.jpg" alt="Logo" />
+      </div>
+        <ul className="menu-nav">
+          <li><Link to={"/"}>Home</Link></li>
+          <li><Link to={"/about"}>Acerca de</Link></li>
+          <li><Link to={"/menu/:menu"}>Menu</Link></li>
+          <li className="categorias">
+            <a href="#">Categorías</a>
+            <ul className="submenu">
+              <li><Link to={`/category/${"Pasteles"}`}>
+                      Pasteles
+                    </Link></li>
+              <li><Link to={`/category/${"Muffins"}`}>
+                      Muffins
+                    </Link></li>
+              <li><Link to={`/category/${"Festivos"}`}>
+                      Festivos
+                    </Link></li>
+              <li><Link to={`/category/${"Personalizados"}`}>
+                      Personalizados
+                    </Link></li>
+            </ul>
+          </li>
+          <li><Link to={"/contact"}>Contacto</Link></li>
+          <div className='cart-nav'>
                 <CartWidget />
-            </Box>
-          </Flex>
-      </Container>
+            </div>
+        </ul>
     </div>
    </>
     )

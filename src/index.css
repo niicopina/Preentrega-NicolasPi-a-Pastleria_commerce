@@ -193,3 +193,10 @@ footer p {
   font-size: 18px;
   letter-spacing: 1.5px;
 }
+
+
+
+.material-symbols-outlined {
+  color: #020101;
+  font-weight: 500;
+}
