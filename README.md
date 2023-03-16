@@ -1,2 +1,4 @@
-# Preentrega-NicolasPi-a-Pastleria_commerce
-proyecto con ReactJs
+# Entrega final del proyecto con ReactJs
+E-commerce "NP by Nati Piña"
+Acceda al master branch 
+Para visualizar la página ponga en consola npm run dev
