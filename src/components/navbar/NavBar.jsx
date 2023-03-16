@@ -2,24 +2,8 @@ import React from 'react'
 import CartWidget from '../CartWidget'
 import './navbar.css'
 import { Link } from "react-router-dom";
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import {
-  Flex,
-  Box,
-  Spacer,
-  Heading,
-  Container,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Button,
-  Avatar,
-} from "@chakra-ui/react";
 
 const NavBar = ({id}) => {
-
-
   return (
     <>
     <div className='navbar' key={id}>
