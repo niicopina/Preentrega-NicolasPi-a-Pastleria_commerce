@@ -30,13 +30,29 @@ const ItemCount = ({ stock, id, price, name }) => {
       }
     });
   };
-
+  const showAddToCartToast = () => {
+    addToCart();
+    Swal.fire({
+      toast: true,
+      icon: 'success',
+      title: 'Agregado al carrito',
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 1000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    });
+  };
+  
   return (
     <>
       <ButtonGroup size="sm" isAttached variant="outline">
         <Center>
           <Button
-            onClick={() => addToCart()}
+            onClick={() => showAddToCartToast()}
             variant="solid"
             colorScheme="blue">
             Add to cart: {count}
@@ -48,3 +64,10 @@ const ItemCount = ({ stock, id, price, name }) => {
 };
 
 export default ItemCount;
+
+{/* <Button
+onClick={() => addToCart()}
+variant="solid"
+colorScheme="blue">
+Add to cart: {count}
+</Button> */}

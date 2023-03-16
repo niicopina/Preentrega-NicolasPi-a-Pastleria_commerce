@@ -21,7 +21,24 @@ const Cart = () => {
     const updatedCart = cart.filter((item) => item.id !== itemId);
     setCart(updatedCart);
   };
-
+  const showDeleteAlert = (item) => {
+    Swal.fire({
+      title: `¿Eliminar del carrito?`,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        handleDelete(item.id);
+        Swal.fire({
+          title: 'Eliminado',
+          text: `ha sido eliminado del carrito`,
+          icon: 'success'
+        });
+      }
+    });
+  };
 
   const sumar = () => {
     setContador (contador + 1);
@@ -61,7 +78,7 @@ const Cart = () => {
               </div>
               <div className="div-eliminar">
                 <button className="btn btn-eliminar" 
-                  onClick={() =>handleDelete(item.id)}>
+                  onClick={() =>showDeleteAlert(item)}>
                   Eliminar</button>
               </div>
               <div className="total-items">
