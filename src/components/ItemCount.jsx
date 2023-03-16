@@ -62,12 +62,4 @@ const ItemCount = ({ stock, id, price, name }) => {
     </>
   );
 };
-
 export default ItemCount;
-
-{/* <Button
-onClick={() => addToCart()}
-variant="solid"
-colorScheme="blue">
-Add to cart: {count}
-</Button> */}
